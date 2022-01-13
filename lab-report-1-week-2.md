@@ -1,5 +1,5 @@
 # Lab Report 1
----
+
 ## Installing VS Code
 
 ![vscode](vscode.png)
@@ -7,4 +7,49 @@
 
 
 ## Remotely Connecting
+VS Code allows you to use the internet to connect to a remote computer
+* First you must use [Account Lookup](https://sdacs.ucsd.edu/~icc/index.php) to look for your CSE15L specific account (use your UCSD login credentials)
+
 ![remoteConnecting](remotelyconnecting.png)
+* Open up the terminal in VS Code via Terminal --> New Terminal in the menu
+* To remotely connect to to the server enter: `ssh cse15lwi22air@ieng6.ucsd.edu` (use your CSE15l specific account)
+* Since I already set up a SSH key, it directly connected me to the server without entering anything else. 
+
+### However:
+---
+Normally when you login for the first time it will prompt you with this message:
+> Are you sure you want to continue connecting (yes/no/[fingerprint])?
+* Enter **yes**
+
+Followed by:
+> Password:
+* Enter your **personal UCSD password** (nothing will show up as you type which is OK)
+
+This process is tedious and takes a lot of time since you need to enter your password every single time you enter, later we will set up a SSH key to make this process more efficient.
+
+---
+
+## Trying Some Commands
+While logged onto the UCSD ieng6 server, you can run terminal line commands like you would be able to on your computer's terminal.
+
+Below are some commands I ran on the ieng6 server:
+![tryingsomecommands](tryingcommands.png)
+* **java -version**: prints current version of Java onto the screen
+* **ls**: lists files/directories in current directory (*blue* indicates it is a directory)
+* **mkdir notes.txt**: creates a directory called "notes.txt"
+* **rm 0r notes.txt**: removes the "notes.txt" directory in the current directory
+* **pwd**: prints the working directory to the screen
+
+## Moving files with scp
+The `scp` command allows you to copy files from your local computer to the remote comptuer:
+![scp](movingfilesscp.png)
+* By doing `ls` in a cse15l directory on my local computer, there are files as shown
+
+### Let's say I want to copy `Hello.java` onto the remote computer
+* **On your local computer**, enter: `scp Hello.java cse15lwi22air@ieng6.ucsd.edu:~/`
+* Now logging on to the remote computer, entering `ls` shows that `Hello.java` is listed.
+
+Similarly how you can compile and run Java files on your local computer, you can also do that on the remote computer:
+* Enter `javac Hello.java` followed by `java Hello`, this will also create a new file `Hello.class`
+
+
