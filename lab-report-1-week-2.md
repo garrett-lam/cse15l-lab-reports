@@ -37,7 +37,7 @@ Below are some commands I ran on the ieng6 server:
 * **java -version**: prints current version of Java onto the screen
 * **ls**: lists files/directories in current directory (*blue* indicates it is a directory)
 * **mkdir notes.txt**: creates a directory called "notes.txt"
-* **rm 0r notes.txt**: removes the "notes.txt" directory in the current directory
+* **rm -r notes.txt**: removes the "notes.txt" directory in the current directory
 * **pwd**: prints the working directory to the screen
 
 ## Moving files with scp
@@ -45,11 +45,30 @@ The `scp` command allows you to copy files from your local computer to the remot
 ![scp](movingfilesscp.png)
 * By doing `ls` in a cse15l directory on my local computer, there are files as shown
 
-### Let's say I want to copy `Hello.java` onto the remote computer
+Let's say I want to copy `Hello.java` onto the remote computer
 * **On your local computer**, enter: `scp Hello.java cse15lwi22air@ieng6.ucsd.edu:~/`
 * Now logging on to the remote computer, entering `ls` shows that `Hello.java` is listed.
 
 Similarly how you can compile and run Java files on your local computer, you can also do that on the remote computer:
 * Enter `javac Hello.java` followed by `java Hello`, this will also create a new file `Hello.class`
 
+
+## Setting an SSH Key
+As mentioned earlier, using `ssh` to log on to the ieng6 server and entering your password each time takes a long time. Setting up an SSH key will streamline this process.
+![keygen](keygen.png)
+* On your **local computer**, enter `ssh-keygen` followed by `/Users/garrettlam/.ssh/id_rsa` (replace garrettlam with your username)
+* Since I already have a SSH key, I will have to overwrite it by entering `y`.
+* Enter a passphrase, or just leave it empty by pressing Enter again on your keyboard then confirm it.
+
+This does the following on your local computer:
+1. Creates a private key in `/Users/garrettlam/.ssh/id_rsa`
+2. Creates a public key in `/Users/garrettlam/.ssh/id_rsa.pub`
+
+![idrsa](idrsa.png)
+* Finally to finish off setting up the SSH key, on your local computer, enter: `scp /Users/garrettlam/.ssh/id_rsa.pub cs15lwi22air@ieng6.ucsd.edu:~/.ssh/authorized_keys`
+* Enter your password, then you are all set up
+
+> Now you will be able to use the `ssh` or `scp` commands from your local computer to the remote computer without entering a password.
+
+## Optimizing Remote Running
 
