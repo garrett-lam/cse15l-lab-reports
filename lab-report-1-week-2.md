@@ -42,8 +42,8 @@ Below are some commands I ran on the ieng6 server:
 
 ## Moving files with scp
 The `scp` command allows you to copy files from your local computer to the remote comptuer:
-![scp](movingfilesscp.png)
 * By doing `ls` in a cse15l directory on my local computer, there are files as shown
+![scp](movingfilesscp.png)
 
 Let's say I want to copy `Hello.java` onto the remote computer
 * **On your local computer**, enter: `scp Hello.java cse15lwi22air@ieng6.ucsd.edu:~/`
@@ -58,7 +58,7 @@ As mentioned earlier, using `ssh` to log on to the ieng6 server and entering you
 ![keygen](keygen.png)
 * On your **local computer**, enter `ssh-keygen` followed by `/Users/garrettlam/.ssh/id_rsa` (replace garrettlam with your username)
 * Since I already have a SSH key, I will have to overwrite it by entering `y`.
-* Enter a passphrase, or just leave it empty by pressing Enter again on your keyboard then confirm it.
+* Enter a passphrase, or just leave it empty by pressing Enter on your keyboard again then confirm it.
 
 This does the following on your local computer:
 1. Creates a private key in `/Users/garrettlam/.ssh/id_rsa`
@@ -68,7 +68,7 @@ This does the following on your local computer:
 * Finally to finish off setting up the SSH key, on your local computer, enter: `scp /Users/garrettlam/.ssh/id_rsa.pub cs15lwi22air@ieng6.ucsd.edu:~/.ssh/authorized_keys`
 * Enter your password, then you are all set up
 
-> Now you will be able to use the `ssh` or `scp` commands from your local computer to the remote computer without entering a password.
+Now you will be able to use the `ssh` or `scp` commands from your local computer to the remote computer without entering a password.
 
 ## Optimizing Remote Running
 ![remoterunning](remoterunning.png)
