@@ -71,4 +71,12 @@ This does the following on your local computer:
 > Now you will be able to use the `ssh` or `scp` commands from your local computer to the remote computer without entering a password.
 
 ## Optimizing Remote Running
+![remoterunning](remoterunning.png)
+**Scenario**: You made some edits on your local computer to the file `Hello.java` and need to copy and run it on the remote server.
+* By entering `ssh cse15lwi22air@ieng6.ucsd.edu "javac Hello.java; java Hello"`, you are able to do this
 
+Key takeaways from this command:
+* After typing `ssh cse15lwi22air@ieng6.ucsd.edu`, whatever you type in the `" "` is what will be run on
+* Semicolons (`;`) can be used to separate and run multiple commands on the same command line
+
+>*tip:* Using the up arrow on your keyboard in the terminal allows you go through previous commands you entered to edit or re-enter them.
