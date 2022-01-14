@@ -50,6 +50,7 @@ The `scp` command allows you to copy files from your local computer to the remot
 Let's say I want to copy `Hello.java` onto the remote computer
 * **On your local computer**, enter: `scp Hello.java cse15lwi22air@ieng6.ucsd.edu:~/`
 * Now logging on to the remote computer, entering `ls` shows that `Hello.java` is listed.
+> *tip:* The `:~` at the end means the default or home directory.
 
 Similarly how you can compile and run Java files on your local computer, you can also do that on the remote computer:
 * Enter `javac Hello.java` followed by `java Hello`, this will also create a new file `Hello.class`
