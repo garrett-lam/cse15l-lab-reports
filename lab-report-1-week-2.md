@@ -14,7 +14,7 @@ VS Code allows you to use the internet to connect to a remote computer
 
 ![remoteConnecting](remotelyconnecting.png)
 * Open up the terminal in VS Code via Terminal --> New Terminal in the menu
-* To remotely connect to to the server enter: `ssh cse15lwi22air@ieng6.ucsd.edu` (use your CSE15l specific account)
+* To remotely connect to to the server enter: `ssh cse15lwi22air@ieng6.ucsd.edu` (use your CSE15L specific account)
 * Since I already set up a SSH key, it directly connected me to the server without entering anything else. 
 
 ### However:
