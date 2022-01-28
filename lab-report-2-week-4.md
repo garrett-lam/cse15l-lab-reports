@@ -1,6 +1,6 @@
 # Lab Report 2
 
-## Code Change 1
+## Code Change 1: Fix when no bracket or parenthesis in file
 The reason for adding this line of code is because of this: [Failure Inducing Input 1](https://github.com/garrett-lam/markdown-parse/commit/30dd4293655185b8c192a5d6a092b6849e9aa693)
 
 ![code change 1](codechangeone.png)
@@ -15,7 +15,7 @@ Running the code `javac MarkdownParse.java` followed by `java MarkdownParse fail
 
 ---
 
-## Code Change 2
+## Code Change 2: Fix copying image files and allows text in between brackets and parenthesis
 The reason for coding this if statement is because of this: [Failure Inducing Input 2](https://github.com/garrett-lam/markdown-parse/commit/993ca3cffa6ad9b1c22fc1bf26b953107ab9489b)
 
 
@@ -31,7 +31,7 @@ Running the updated code `javac MarkdownParse.java` followed by `java MarkdownPa
 * The output after the code the if statement is `[ucsd.edu]`
 
 ---
-## Code Change 3
+## Code Change 3: Fix having extra ']' in between brackets and parenthesis to be outputted
 The reason for changing the if statement in code is because of this: [Failure Inducing Input 3](https://github.com/garrett-lam/markdown-parse/commit/11b398ff8a13acb73ec1f948a5397c29691dc534)
 
 ![code change 3](codechangethree.png)
