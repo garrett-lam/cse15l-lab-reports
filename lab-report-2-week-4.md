@@ -26,12 +26,24 @@ Running the updated code `javac MarkdownParse.java` followed by `java MarkdownPa
 ![fail2output](fail2output.png)
 
 * I added this line of code as it will prevent the code from adding the image file into the output. 
-* This is because in markdown files, images must start with an exclamation mark next to the first open brackets
+* This is because in markdown files, images must start with an exclamation mark '!' next to the first open brackets
 * Moreover, by adding `openParen == nextCloseBracket + 1` into the code, it allows for links that have text to be in between the close brackets and open parenthesis to be outputted.
+* The output after the code the if statement is `[ucsd.edu]`
 
 ---
 ## Code Change 3
+The reason for changing the if statement in code is because of this: [Failure Inducing Input 3](https://github.com/garrett-lam/markdown-parse/commit/11b398ff8a13acb73ec1f948a5397c29691dc534)
 
 ![code change 3](codechangethree.png)
+
+Running the updated code `javac MarkdownParse.java` followed by `java MarkdownParse failure-inducing-input3.md` outputs this:
+
+![fail3output](fail3output.png)
+
+* I added this line of code as it allows for links that have a ']' just before the open parenthesis to be outputted.
+* Originally only `[gradescope.com]` would show up in the output
+* After debugging the if statement, the output is `[www.gradescope.com, www.canvas.com]`
+
+
 
 
