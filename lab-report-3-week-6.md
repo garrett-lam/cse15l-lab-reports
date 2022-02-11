@@ -1,7 +1,7 @@
 # Lab Report 3
 
 ## Choice 1: Streamlining ssh Configuration
----
+
 ### Show your `.ssh/config` file, and how you edited it (with VScode, another program, etc)
 
 * First to find the `.ssh/config` file, I used entered `ls -alt` in my home directory.
