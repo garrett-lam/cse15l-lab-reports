@@ -12,10 +12,10 @@ There are 3 valid links in Snippet 1: **`google.com**, **google.com**, and **ucs
 There are 3 valid links in Snippet 2: **a.com**, **a.com(())**, and **example.com**.
 ![snippet2](snippet2.png)
 
-There is 1 valid links in Snippet 3: **https://ucsd-cse15l-w22.github.io/**
+There is 1 valid link in Snippet 3: **https://ucsd-cse15l-w22.github.io/**
 ![snippet3](snippet3.png)
 
-Based on VS Code preview, I created these tests to run in my own markdown-parse repository and in the other group's markdown-parse repository I reviewed. (6 Test Methods were created)
+Based on VS Code preview, I created these tests to run in my own markdown-parse repository and in the other group's markdown-parse repository I reviewed. (6 test cases were created total, 3 in each repository)
 ![testsnippet1](testsnippet1.png)
 ![testsnippet2](testsnippet2.png)
 ![testsnippet3](testsnippet3.png)
@@ -32,4 +32,9 @@ Based on VS Code preview, I created these tests to run in my own markdown-parse 
 * From the output, the other group's implementation of markdownparse also failed all three test cases 
 
 ## Follow Up Code Change Questions
-* For snippet 1, I do not believe there is a small code change that I would be able to make to my program for it to work for all backtick related cases. 
+* For snippet 1, there might be a small code change that would make the program work for all backtick related cases. From the VS Code preview, it seems like only backticks that occur before the brackets lead to an invalid link. Therefore, similarly to how we fixed the program for images by checking for `!` characters. We could do the same for the backticks.
+
+* For snippet 2, I do not think there is a small code change that would make the program work for all cases that have nested parentheses, brackets, and escaped brackets. To have all these cases to work for the program would require many variables and data structures to keep track of what is going on in the code. An idea would to potentially use one Stack to keep track of brackets, another Stack to keep track of parentheses, and then a loop and if statements for the escaped brackets
+
+
+* For snippet 3, I do not believe there is a small code change that would make the program work for all cases that have newlines in the brackets and parentheses. For these cases, we could check for the `\n` character after each variable: `nextOpenBracket`, `nextCloseBracket`,`openParen`, `closeParen` then having a counter until the next reaching the next variable. This may require 4 loops and multiple if statements that would go over 10 lines.
