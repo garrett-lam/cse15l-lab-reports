@@ -32,7 +32,7 @@ Based on VS Code preview, I created these tests to run in my own markdown-parse 
 * From the output, the other group's implementation of markdownparse also failed all three test cases 
 
 ## Follow Up Code Change Questions
-* For snippet 1, there might be a small code change that would make the program work for all backtick related cases. From the VS Code preview, it seems like only backticks that occur before the brackets lead to an invalid link. Therefore, similarly to how we fixed the program for images by checking for `!` characters. We could do the same for the backticks.
+* For snippet 1, there might be a small code change that would make the program work for all backtick related cases. From the VS Code preview, it seems like only backticks that occur before the brackets lead to an invalid link. Therefore, similarly to how we fixed the program for images by checking for `!` characters. We could do the same for the backtick (`) character.
 
 * For snippet 2, I do not think there is a small code change that would make the program work for all cases that have nested parentheses, brackets, and escaped brackets. To have all these cases to work for the program would require many variables and data structures to keep track of what is going on in the code. An idea would to potentially use one Stack to keep track of brackets, another Stack to keep track of parentheses, and then a loop and if statements for the escaped brackets
 
