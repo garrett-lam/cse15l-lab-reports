@@ -12,7 +12,7 @@ Following this, in **both** repositories, I used the bash command on script.sh b
 * This resulted in a new file in each repository being called `results.txt` which contains the output of running the `bash script.sh` command.
 
 ## Comparing my markdown-parse vs lab 9 markdown-parse's implementation
-With two `results.txt` files, one in each repository, I compared the outputs of running MarkdownParse in each repository using the `diff` on the results of running the bash for loop. I entered `diff mymarkdown-parse/results.txt markdown-parse/results.txt` in the home directory of my ieng6 account.
+With two `results.txt` files, one in each repository, I compared the outputs of running MarkdownParse in each repository using `diff` on the results of running the bash for loop. I entered `diff mymarkdown-parse/results.txt markdown-parse/results.txt` in the home directory of my ieng6 account.
 
 ![diff](diff.png)
 * `diff` takes two files as arguments, in this case, `mymarkdown-parse/results.txt` and `markdown-parse/results.txt`
