@@ -1,16 +1,19 @@
 # Lab Report 5
 
 I ran the 652 commonmark-spec tests in the test-files directory using the lab 9 markdown-parse repository given and my own markdown-parse repository. I did this by creating a `script.sh` file in both repositories running `java MarkdownParse` on each file using a for loop.
+
 ![scriptsh](scriptsh.png)
 * The `*.md` means all md fails in test-files
 * `echo $file` was to print out the name of the file
 
 Following this, in **both** repositories, I used the bash command on script.sh by typing `bash script.sh`. Instead of printing it to the console, I used output redirection to put the command's output into a file. I did this by entering `> results.txt` next to the `bash script.sh` command.
+
 ![bashresults](bashresults.png)
 * This resulted in a new file in each repository being called `results.txt` which contains the output of running the `bash script.sh` command.
 
 ## Comparing my markdown-parse vs lab 9 markdown-parse's implementation
 With two `results.txt` files, one in each repository, I compared the outputs of running MarkdownParse in each repository using the `diff` on the results of running the bash for loop. I entered `diff mymarkdown-parse/results.txt markdown-parse/results.txt` in the home directory of my ieng6 account.
+
 ![diff](diff.png)
 * `diff` takes two files as arguments, in this case, `mymarkdown-parse/results.txt` and `markdown-parse/results.txt`
 * This outputs the differences between the files to the terminal as shown above
@@ -29,6 +32,7 @@ With two `results.txt` files, one in each repository, I compared the outputs of 
 
 ### Test 1: 22.md
 Line 270 corresponds to the output of test 22.md
+
 ![22](22.png)
 * According to VS Code preview, foo is a valid hyperlink containing the link **/bar\* “ti\Itle”**. 
 * Therefore, expected output should be: [/bar\* “ti\Itle”]
@@ -45,6 +49,7 @@ Lab 9's markdown-parse produced this output:
 
 ### Test 2: 481.md
 Line 850 corresponds to the output of test 481.md
+
 ![481](481.png)
 * According to VS Code preview, link is a valid hyperlink containing the link **/uri “title”**. 
 * Therefore, expected output should be: [/uri “title”]
