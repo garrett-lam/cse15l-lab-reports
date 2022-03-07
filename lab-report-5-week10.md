@@ -34,9 +34,11 @@ Line 270 corresponds to the output of test 22.md
 * Therefore, expected output should be: [/bar\* “ti\Itle”]
 
 My markdown-parse produced this output:
+
 ![mine22](mine22.png)
 
 Lab 9's markdown-parse produced this output:
+
 ![joe22](joe22.png)
 
 * From the outputs, my markdown-parse produced the correct output while the lab 9's markdown-parse produced the incorrect output.
@@ -48,14 +50,17 @@ Line 850 corresponds to the output of test 481.md
 * Therefore, expected output should be: [/uri “title”]
 
 My markdown-parse produced this output:
+
 ![mine481](mine481.png)
 
 Lab 9's markdown-parse produced this output:
+
 ![joe481](joe481.png)
 
 * From the outputs, my markdown-parse produced the correct output while the lab 9's markdown-parse produced the incorrect output.
 
 ### Problem with Lab 9's markdown-parse for Test 1
-
+The bug is ....
 
 ### Problem with Lab 9's markdown-parse for Test 2
+The bug is ...
