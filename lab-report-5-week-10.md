@@ -64,8 +64,15 @@ Lab 9's markdown-parse produced this output:
 
 * From the outputs, my markdown-parse produced the correct output while the lab 9's markdown-parse produced the incorrect output.
 
-### Problem with Lab 9's markdown-parse for Test 1
-The bug is ....
+### Problem with Lab 9's markdown-parse for 22.md and 481.md
+For both of the tests, the **bug** with lab 9's markdown-parse implementation is that it doesn't allow links that have spaces to be outputted (i.e. count as links).
 
-### Problem with Lab 9's markdown-parse for Test 2
-The bug is ...
+![lab9mdp](lab9mdp.png)
+On line 75-76, lab 9's code only allowed `potentialLink` to be added to `toReturn` when `potentialLink.indexOf(" ") == -1` && `potentialLink.indexOf("\m") == -1`.
+* This means that potentialLink cannot be added if there are any spaces or new lines present.
+* Therefore, this lead to the potential links in 22.md and 481.md to not be added to `toReturn` since both of them have a space(" ") in the md file, which lead to [] being the output.
+
+The code that should be **fixed** should be line 75:
+* You should remove `potentialLink.indexOf(" ") == -1` from the if statement.
+
+This should fix the program and allow test outputs for 22.md and 481.md to be correct.
